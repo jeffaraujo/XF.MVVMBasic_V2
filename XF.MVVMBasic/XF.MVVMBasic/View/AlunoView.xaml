@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="XF.MVVMBasic.View.AlunoView">
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="Novo" Command="{Binding NovoCommand}" Order="Primary" Priority="1"/>
+    </ContentPage.ToolbarItems>
+    <ContentPage.Content>
+        <StackLayout>
+            <ListView ItemsSource="{Binding lstAlunos}">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <TextCell Text="{Binding Nome}" Detail="{Binding RM}" />
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+            <Button Text="Novo" Command="{Binding NovoCommand}" />
+        </StackLayout>
+    </ContentPage.Content>
+    
+</ContentPage>

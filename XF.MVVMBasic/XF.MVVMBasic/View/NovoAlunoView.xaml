@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="XF.MVVMBasic.View.NovoAlunoView">
+    <ContentPage.Content>
+        <StackLayout Padding="20">
+            <Label Text="Aluno" Font="20" />
+            <Entry Placeholder="Nome" Text="{Binding Nome}"  />
+            <Entry Placeholder="RM" Text="{Binding RM}" />
+            <Entry Placeholder="E-mail" Text="{Binding Email}" />
+            <Button Text="Salvar" Command="{Binding SalvarCommand}" ></Button>
+            <Button Text="Cancelar" Command="{Binding CancelarCommand}" ></Button>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
